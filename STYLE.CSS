@@ -1,0 +1,132 @@
+{
+  margin: 0;
+  padding: 0;
+  font family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.3rem 10%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.header ::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(95, 10, 241, 0.5);
+  backdrop-filter: blur(50px);
+  z-index: -100;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-left: 2.5rem;
+  text-align: center;
+}
+
+.icons {
+  position: absolute;
+  right: 5%;
+  display: none;
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* breakpoints */
+@media (max-width: 992px) {
+  .HEADER {
+    padding: 1.3rem 5%;
+  }
+
+  @media (max-width: 768px) {
+  .icons {
+    display: inline-flex;
+  }
+
+  .navbar {
+    position: absolute;
+    top:100%;
+    left: 0;
+    width: 100%;
+    height: 17.7rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(50px);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+  }
+}
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  #check {
+    display: none;
+  }
+
+  #check:checked ~ .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+  .navbar {
+    display: none;
+  }
+
+}.IMAGE-CONTAINER {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease , box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+}
